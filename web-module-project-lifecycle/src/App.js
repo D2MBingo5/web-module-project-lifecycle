@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import axios from 'axios';
 
-function App() {
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      userInfo: [],
+      username: ''
+    }
+  }
+
+render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Github User Information</h1>
+      <form>
+        <input />
+        <button>Fetch User</button>
+      </form>
+      <div id='gitUser'>
+
+      </div>
     </div>
   );
+}
+  
 }
 
 export default App;
